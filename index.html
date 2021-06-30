@@ -77,10 +77,18 @@
         <div class="mx-auto p-4 col-lg-7">
           <p class="lead text-center"><br></p>
           <div class="form-row">
-            <div class="form-group col-md-12"> <input type="text" class="form-control text-primary bg-secondary"
-                id="form27" placeholder="Enter Handshake" required="required" name="Handshake"> </div>
-            <div class="form-group col-md-12"> <input type="text" class="form-control text-primary bg-secondary"
-                id="form28" placeholder="Enter Client Key" name="ClientKey" required="required" style=""> </div>
+            <div class="form-group col-md-12"> <label for="form27" class="font-weight-normal pull-left text-dark">Enter
+                Handshake Id</label><input type="text" class="form-control text-primary bg-secondary" id="form27"
+                placeholder="Enter Handshake" required="required" name="Handshake"> </div>
+            <div class="form-group col-md-12"> <label for="form28" class="font-weight-normal pull-left text-dark">Enter
+                Client Key</label><input type="text" class="form-control text-primary bg-secondary" id="form28"
+                placeholder="Enter Client Key" name="ClientKey" required="required" style=""> </div>
+            <div class="form-group col-md-12"> <label for="form29" class="font-weight-normal pull-left text-dark">Retry
+                Mode</label><select class="form-control text-primary bg-secondary" id="form29"
+                placeholder="Select if retry" name="retry" required="required" style="">
+                <option value="true">True</option>
+                <option value="false">False</option>
+              </select> </div>
           </div>
           <button type="button" class="btn btn-primary mt-3" onclick="initiateSession();">Initiate Session</button>
         </div>
@@ -118,7 +126,11 @@
         },
         cl: document.getElementById("form28").value,
         hs: document.getElementById("form27").value,
-        lc: "en"
+        lc: "en",
+        qr: {
+          a: "b"
+        },
+        retry: document.getElementById("form29").value === 'true'
       });
 
       flowx.launch();
