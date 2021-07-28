@@ -109,19 +109,19 @@
       document.getElementById("error").classList.add('d-none');
 
       var flowx = new AttestrFlowx({
-        onError: function (data) {
+        onFlowxError: function (data) {
           document.getElementById("error").classList.remove('d-none');
           if (document.getElementById("errorRes")) {
             document.getElementById("errorRes").innerHTML = JSON.parse(data).message;
           }
         },
-        onComplete: function (data) {
+        onFlowxComplete: function (data) {
           document.getElementById("success").classList.remove('d-none');
           if (document.getElementById("successRes")) {
             document.getElementById("successRes").innerHTML = JSON.parse(data).signature;
           }
         },
-        onSkip: function (data) {
+        onFlowxSkip: function (data) {
           alert("You have skipped the flow");
         },
         cl: document.getElementById("form28").value,
