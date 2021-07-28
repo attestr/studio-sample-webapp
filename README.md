@@ -1,5 +1,6 @@
 # Attestr Studio Sample Webapp
 ![GitHub](https://img.shields.io/github/license/attestr/studio-sample-webapp)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/attestr/studio-sample-webapp)
 
 **Description**
 
