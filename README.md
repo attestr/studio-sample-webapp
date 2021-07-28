@@ -1,3 +1,6 @@
+# Attestr Studio Sample Webapp
+![GitHub](https://img.shields.io/github/license/attestr/studio-sample-webapp)
+
 **Description**
 
 This is basic HTML application written for Attestr customers and developers to run / preview Attestr Studio flows. To read more about Attestr and Designer Studio, check our [documentation](https://docs.attestr.com/attestr-docs/attestr-introduction).
